@@ -11,6 +11,9 @@ def setUpCache(path=""):
 
 def main():
     setUpCache()
+    istambul_quali = ff1.get_session(2021, 'Turkey', 'Q')
+    laps = istambul_quali.load_laps(with_telemetry=True)
+    laps.to_csv("istambul_quali.csv")
 
 
 
